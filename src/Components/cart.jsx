@@ -54,10 +54,11 @@ function Cart() {
             <h1>Your Cart</h1>
             {cartItems.length === 0 ? (
                 <div className="cart-items empty-cart">
-                    <img src='../images/cart-empty.jpg' alt='Your cart is empty..'/>
+                    <img src={process.env.PUBLIC_URL + '/images/cart-empty.jpg'} alt='Your cart is empty..' />
                 </div>
             ) : (
                 <div className="cart-container">
+                    
                     <div className="cart-items">
                         {cartItems.map((item, index) => (
                             <div className="cart-item" key={item.id}>

@@ -17,7 +17,7 @@ function HomePage() {
     // const [selectedCake, setSelectedCake] = useState(null);
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter basename="/CupnCrave">
                 <Nav />
                     <Routes>
                         <Route path="/" element={<Section1 />} />

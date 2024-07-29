@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import Popular from "./popular";
 import Discount from "./discount";
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import { NavLink } from "react-router-dom";
-
 
 function Section1() {
     useEffect(() => {
@@ -42,7 +41,7 @@ function Section1() {
                     <div className="frontflex">
                         <div className="heading">
                             <div className="text">
-                                <img src="../images/finallogo.png" alt="Cafe Logo" id="coffeeshop" />
+                                <img src={`${process.env.PUBLIC_URL}/images/finallogo.png`} alt="Cafe Logo" id="coffeeshop" />
                                 <h1>
                                     <ReactTyped
                                         strings={['Brew-tiful Mornings Starts Here !']}
@@ -63,21 +62,20 @@ function Section1() {
                         </div>
                         <div className="slideshow">
                             <div className="animationimg">
-                                <img src="../images/dish1.png" className="fade" alt="Dish 1" />
-                                <img src="../images/dish2.png" className="fade" alt="Dish 2" />
-                                <img src="../images/dish3.png" className="fade" alt="Dish 3" />
-                                <img src="../images/dish6.png" className="fade" alt="Dish 4" />
-                                <img src="../images/dish5.png" className="fade" alt="Dish 5" />
+                                <img src={`${process.env.PUBLIC_URL}/images/dish1.png`} className="fade" alt="Dish 1" />
+                                <img src={`${process.env.PUBLIC_URL}/images/dish2.png`} className="fade" alt="Dish 2" />
+                                <img src={`${process.env.PUBLIC_URL}/images/dish3.png`} className="fade" alt="Dish 3" />
+                                <img src={`${process.env.PUBLIC_URL}/images/dish6.png`} className="fade" alt="Dish 4" />
+                                <img src={`${process.env.PUBLIC_URL}/images/dish5.png`} className="fade" alt="Dish 5" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-        <Discount />
-        <Popular/>
+            <Discount />
+            <Popular />
         </>
-        
     );
 }
 

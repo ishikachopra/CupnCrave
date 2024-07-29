@@ -7,7 +7,7 @@ function Discount(){
             <div className="discount" >
                 <div className="imgbg">
                     <div className="distext">
-                        <div className="disicon"> <img src="../images/cup.png" alt=""></img></div>
+                        <div className="disicon"> <img src={process.env.PUBLIC_URL + "../images/cup.png"} alt=""></img></div>
                         <div className="dish3">Enjoy 20% off on all drinks</div>
                         <h1 className="dish1">Every Thrusday , 4pm-7pm</h1>
                         <NavLink to="/Menu">Order Now</NavLink>

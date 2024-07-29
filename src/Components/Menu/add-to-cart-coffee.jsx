@@ -12,6 +12,14 @@ const AddToCartCoffeePage = () => {
         return <div>Item not found. Please go back to the menu and select an item.</div>;
     }
 
+    const getImagePath = (path) => {
+        // Ensure path is consistent
+        if (path.startsWith('../')) {
+            return path.replace('../', './');
+        }
+        return path;
+    };
+
     const handleSizeChange = (event) => {
         const size = event.target.value;
         setSelectedSize(size);
@@ -39,7 +47,7 @@ const AddToCartCoffeePage = () => {
             cartItems[existingItemIndex].quantity += 1;
         } else {
             cartItems.push({
-                imgSrc: item.imgSrc,
+                imgSrc:getImagePath(item.imgSrc),
                 name: item.name,
                 price: displayedPrice,
                 size: selectedSize,
@@ -52,10 +60,11 @@ const AddToCartCoffeePage = () => {
     };
 
     return (
+        
         <div className="product-page">
             <div className="product-container">
                 <div className="product-images">
-                    <img className="main-image" src={item.imgSrc} alt={item.name} />
+                    <img className="main-image" src={getImagePath(item.imgSrc)} alt={item.name} />
                 </div>
                 <div className="product-details">
                     <div className="breadcrumbs">
@@ -74,7 +83,7 @@ const AddToCartCoffeePage = () => {
                             <option value="Venti">Venti</option>
                         </select>
                     </div>
-                    <button className="add-to-cart cart-add" onClick={handleAddToCart}>Add To Cart</button>
+                    <div className="add-to-cart cart-add" onClick={handleAddToCart}>Add To Cart</div>
                     
                 </div>
             </div>

@@ -2,6 +2,7 @@
 const coffeeItems = [
     {
         imgSrc: "../coffee_imgs/hotchocolate.webp",
+        
         altText: "Chocolate Fudge",
         name: "Chocolate Fudge",
         description: "(180 ML-104 Kcal)",

@@ -1720,6 +1720,11 @@ form a {
    font-weight: bold;
  }
 
+ .cart-add{
+  width: 100px;
+  text-align: center;
+ }
+
  /* Mobile Styles */
  @media (max-width: 768px) {
    .product-container {
@@ -1735,10 +1740,22 @@ form a {
    .product-details {
      text-align: center;
    }
+     .product-details h1 {
+       text-align: center;
+     }
+     .product-details button{
+      margin: auto;
+      text-align: center;
+     }
 
    .add-to-cart-pg {
      width: 100%;
    }
+
+   .cart-add{
+    width: auto;
+   }
+   
  }
 
  /* --------------     CART PAGE    -------------- */

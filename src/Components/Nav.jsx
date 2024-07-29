@@ -47,12 +47,12 @@ function Nav() {
                     <div className="subdropdown">
 
                     <div className="uppermenu">
-                        <h1>Main Menu</h1><NavLink to="/" onClick={closeMenu}><i class="fa-solid fa-house"></i> HOME</NavLink>
-                        <NavLink to="/Menu" onClick={closeMenu}><i class="fa-solid fa-utensils"></i> MENU</NavLink>
-                        <NavLink to="/cart" onClick={closeMenu}><i class="fa-solid fa-bag-shopping"></i> YOUR ORDERS</NavLink>
-                        <NavLink to="/About" onClick={closeMenu}><i class="fa-solid fa-address-card"></i> ABOUT US</NavLink>
-                        <NavLink to="/Contact" onClick={closeMenu}><i class="fa-solid fa-address-book"></i> CONTACT US</NavLink>
-                        <NavLink to="/" onClick={closeMenu}><i class="fa-solid fa-gear"></i> SETTINGS</NavLink></div>
+                        <h1>Main Menu</h1><NavLink to="/" onClick={closeMenu}><i className="fa-solid fa-house"></i> HOME</NavLink>
+                        <NavLink to="/Menu" onClick={closeMenu}><i className="fa-solid fa-utensils"></i> MENU</NavLink>
+                        <NavLink to="/cart" onClick={closeMenu}><i className="fa-solid fa-bag-shopping"></i> YOUR ORDERS</NavLink>
+                        <NavLink to="/About" onClick={closeMenu}><i className="fa-solid fa-address-card"></i> ABOUT US</NavLink>
+                        <NavLink to="/Contact" onClick={closeMenu}><i className="fa-solid fa-address-book"></i> CONTACT US</NavLink>
+                        <NavLink to="/" onClick={closeMenu}><i className="fa-solid fa-gear"></i> SETTINGS</NavLink></div>
                     <div className="lowermenu"><NavLink to="/loginpage" className="login-btn" onClick={closeMenu}>LOGIN</NavLink>
                         <NavLink to="/loginpage" className="login-btn" onClick={closeMenu}>SIGNUP</NavLink>
                         <NavLink to="/loginpage" className="login-btn" onClick={closeMenu}>LOGOUT</NavLink></div>
@@ -61,7 +61,10 @@ function Nav() {
                 
             </div>
             <div className="logo">
-                <img src="../images/final_navlogo.png" alt="Cafe Logo" />
+                <img
+                    src={`${process.env.PUBLIC_URL}/images/final_navlogo.png`}
+                    alt="Cafe Logo"
+                />
             </div>
 
             <div className="center">
